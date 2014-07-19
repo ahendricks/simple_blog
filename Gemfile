@@ -6,7 +6,13 @@ gem 'rails', '4.1.4'
 
 group :development do
 	gem 'sqlite3'
+	gem 'spring'
 end 
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
 
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -18,11 +24,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 group :doc do
-	gem 'sdoc', '~> 0.4.0',          group: :doc
+	gem 'sdoc', '~> 0.4.0'
 end
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
